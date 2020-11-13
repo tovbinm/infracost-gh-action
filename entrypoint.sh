@@ -33,8 +33,8 @@ save_infracost_cmd () {
 
 pwd
 ls -lah /github/workspace
-ls -lah /github/workspace/master
-ls -lah /github/workspace/pull_request
+ls -lah /github/workspace/master/.terraform
+ls -lah /github/workspace/pull_request/.terraform
 
 dir="/github/workspace/master"
 save_infracost_cmd $dir
