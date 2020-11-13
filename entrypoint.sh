@@ -31,7 +31,7 @@ save_infracost_cmd () {
   echo "$infracost_cmd" > $1/infracost_cmd
 }
 
-dir="/github/workspace/master"
+dir="/home/runner/work/hephaestus/hephaestus/master"
 save_infracost_cmd $dir
 echo "Running infracost on master branch using:"
 echo "  $ $(cat $dir/infracost_cmd)"
@@ -41,7 +41,7 @@ master_monthly_cost=$(cat master_infracost.txt | awk '/OVERALL TOTAL/ { print $N
 echo "  master_monthly_cost=$master_monthly_cost"
 echo "::set-output name=master_monthly_cost::$master_monthly_cost"
 
-dir="/github/workspace/pull_request"
+dir="/home/runner/work/hephaestus/hephaestus/pull_request"
 save_infracost_cmd $dir
 echo "Running infracost on pull request using:"
 echo "  $ $(cat $dir/infracost_cmd)"
