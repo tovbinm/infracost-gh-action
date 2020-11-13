@@ -35,6 +35,7 @@ pwd
 ls -lah /github/workspace
 
 dir="/github/workspace/master"
+ls -lah $dir
 save_infracost_cmd $dir
 echo "Running infracost on master branch using:"
 echo "  $ $(cat $dir/infracost_cmd)"
@@ -45,6 +46,7 @@ echo "  master_monthly_cost=$master_monthly_cost"
 echo "::set-output name=master_monthly_cost::$master_monthly_cost"
 
 dir="/github/workspace/pull_request"
+ls -lah $dir
 save_infracost_cmd $dir
 echo "Running infracost on pull request using:"
 echo "  $ $(cat $dir/infracost_cmd)"
